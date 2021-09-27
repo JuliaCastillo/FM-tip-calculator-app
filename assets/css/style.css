@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 body {
-  background-color: #26c0ab;
+  font-family: 'Space Mono', monospace;
 }
 
 .attribution {
