@@ -37,7 +37,28 @@ function calculateTip() {
     let tipPerPerson = tip / people;
     let totalPerPerson = (bill + tip) / people;
 
-    tipResult.textContent = Math.round((tipPerPerson + Number.EPSILON) * 100) / 100;
-    totalResult.textContent = Math.round((totalPerPerson + Number.EPSILON) * 100) / 100;
+    tipResult.textContent = tipPerPerson.toFixed(2);
+    totalResult.textContent = totalPerPerson.toFixed(2);
   }
+}
+
+
+const resetButton = document.querySelector('#reset-button');
+
+resetButton.addEventListener('click', function () {
+  reset();
+})
+
+function reset() {
+  billInput.value = '';
+  bill = 0;
+
+  tipPerc = 0;
+
+  peopleInput.value = '';
+  people = 0;
+
+  tipResult.textContent = 0;
+  totalResult.textContent = 0;
+
 }
