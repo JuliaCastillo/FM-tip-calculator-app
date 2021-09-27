@@ -5,19 +5,94 @@ $very-dark-cyan: hsl(183, 100%, 15%);
 $dark-grayish-cyan: hsl(186, 14%, 43%);
 $dark-grayish-cyan2: hsl(184, 14%, 56%);
 $light-grayish-cyan: hsl(185, 41%, 84%);
-$light-grayish-cyan2: hsl(189, 41%, 97%);
+$light-grayish-cyan2: hsl(189, 41%, 93%);
 $white: hsl(0, 0%, 100%);
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700;
   background-color: $light-grayish-cyan;
+  padding: 0;
+  margin: 0;
 }
 
 main {
   background-color: $white;
+  margin: 0;
+  padding: 20px 30px ;
 }
+
+.input-section {
+  color: $dark-grayish-cyan;
+
+  p {
+    margin-top: 25px;
+    margin-bottom: 7px;
+  }
+
+  .tip-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .tip-button {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: $very-dark-cyan;
+    color: $white;
+    border: none;
+
+    border-radius: 5px;
+    width: 48%;
+    margin: 7px 0px;
+    padding: 7px 30px;
+  }
+
+  .input-wrapper {
+
+    display: flex;
+    align-items: center;
+    background-color: $light-grayish-cyan2;
+    padding: 3px 15px;
+    border-radius: 5px;
+    height: 40px;
+    //width: 100%;
+    
+    img {
+      margin: 0px 5px;
+      width: 13px;
+      //height: 100%;
+    }
+
+    input {
+      border: none;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: right;
+      background-color: $light-grayish-cyan2;
+
+      //padding: 0px 10px;
+      border-radius: 5px;
+      height: 100%;
+      width: 90%;
+    }
+  }
+
+  .custom-tip{
+    width: 39%;
+    input {
+      width: 100%;
+    }
+  }
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

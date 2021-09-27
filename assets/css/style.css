@@ -1,11 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700;
   background-color: #c5e4e7;
+  padding: 0;
+  margin: 0;
 }
 
 main {
   background-color: white;
+  margin: 0;
+  padding: 20px 30px;
+}
+
+.input-section {
+  color: #5e7a7d;
+}
+
+.input-section p {
+  margin-top: 25px;
+  margin-bottom: 7px;
+}
+
+.input-section .tip-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-section .tip-button {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #00494d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 48%;
+  margin: 7px 0px;
+  padding: 7px 30px;
+}
+
+.input-section .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e6f2f4;
+  padding: 3px 15px;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.input-section .input-wrapper img {
+  margin: 0px 5px;
+  width: 13px;
+}
+
+.input-section .input-wrapper input {
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  background-color: #e6f2f4;
+  border-radius: 5px;
+  height: 100%;
+  width: 90%;
+}
+
+.input-section .custom-tip {
+  width: 39%;
+}
+
+.input-section .custom-tip input {
+  width: 100%;
 }
 
 .attribution {

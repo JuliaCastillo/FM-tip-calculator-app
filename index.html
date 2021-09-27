@@ -15,12 +15,18 @@
 </head>
 
 <body>
+  <div class="logo">
+    <img src="images/logo.svg" alt="Splitter logo">
+  </div>
 
   <main>
     <section class="input-section">
       <div class="bill">
         <p>Bill</p>
-        <input type="number" placeholder="0" id="bill-input">
+        <div class="input-wrapper">
+          <img src="images/icon-dollar.svg" alt="">
+          <input type="number" placeholder="0" id="bill-input">
+        </div>
       </div>
 
       <div class="tip">
@@ -31,13 +37,18 @@
           <button class="tip-button" id="fifteen-perc" value="0.15">15%</button>
           <button class="tip-button" id="twentyfive-perc" value="0.25">25%</button>
           <button class="tip-button" id="fifty-perc" value="0.5">50%</button>
-          <input type="number" placeholder="Custom" id="custom-tip-input">
+          <div class="input-wrapper custom-tip">
+            <input type="number" placeholder="Custom" id="custom-tip-input">
+          </div>
         </div>
       </div>
 
       <div class="people">
         <p>Number of People</p>
-        <input type="number" placeholder="0" id="people-input">
+        <div class="input-wrapper">
+          <img src="images/icon-person.svg" alt="">
+          <input type="number" placeholder="0" id="people-input">
+        </div>
       </div>
 
     </section>
