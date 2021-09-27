@@ -12,7 +12,11 @@ $white: hsl(0, 0%, 100%);
 
 body {
   font-family: 'Space Mono', monospace;
-  
+  background-color: $light-grayish-cyan;
+}
+
+main {
+  background-color: $white;
 }
 
 .attribution { font-size: 11px; text-align: center; }
