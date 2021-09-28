@@ -2,7 +2,7 @@ const billInput = document.querySelector('#bill-input');
 let bill = 0;
 
 const tipButtons = document.querySelectorAll('.tip-button');
-let tipPerc = 0;
+let tipPerc = 0.05;
 
 const peopleInput = document.querySelector('#people-input');
 let people = 0;
@@ -19,6 +19,13 @@ billInput.addEventListener('input', function () {
 
 tipButtons.forEach(item => {
   item.addEventListener('click', function () {
+    const selectedButton = document.querySelector('.selected');
+
+    if (selectedButton !== item) {
+      selectedButton.classList.remove('selected');
+      item.classList.add('selected');
+    }
+
     tipPerc = parseFloat(item.value);
     calculateTip();
   })
