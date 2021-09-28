@@ -106,6 +106,10 @@ main {
   width: 90%;
 }
 
+.input-section .input-wrapper input:active {
+  border: none;
+}
+
 .input-section .custom-tip {
   width: 39%;
 }

@@ -102,6 +102,11 @@ main {
       border-radius: 5px;
       height: 100%;
       width: 90%;
+
+      &:active {
+        border: none;
+
+      }
     }
   }
 
