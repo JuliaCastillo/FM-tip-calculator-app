@@ -18,6 +18,11 @@ body {
   background-color: $light-grayish-cyan;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .logo-wrapper {
@@ -35,7 +40,28 @@ main {
   padding: 20px 25px;
   border-radius: 20px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 880px;
+  }
 }
+
+// removing arrows from number input
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 
 .input-section {
   color: $dark-grayish-cyan;
@@ -43,7 +69,7 @@ main {
 
   .message-wrapper {
     margin-top: 25px;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
 
@@ -59,17 +85,15 @@ main {
   }
 
   .tip-buttons-section {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // align-items: center;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 50px);
     gap: 15px;
-    
 
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 50px);
+    }
   }
 
   .tip-button {
@@ -79,15 +103,10 @@ main {
     background-color: $very-dark-cyan;
     color: $white;
     border: none;
-
     border-radius: 5px;
-    //max-height: 60px;
-    //width: 48%;
-    //margin: 7px 0px;
-    //padding: 7px 30px;
 
     &:hover {
-      background-color: $strong-cyan;
+      background-color: $light-grayish-cyan;
       color: $very-dark-cyan;
     }
   }
@@ -120,10 +139,10 @@ main {
       background-color: $light-grayish-cyan2;
       color: $very-dark-cyan;
 
-      //padding: 0px 10px;
       border-radius: 5px;
       height: 100%;
       width: 90%;
+      flex-grow: 2;
 
       outline: none;
       caret-color: $strong-cyan;
@@ -152,6 +171,23 @@ main {
   .input-error {
     border: 2px solid $orange !important;
   }
+
+
+
+  @media screen and (min-width: 992px) {
+    padding: 20px;
+
+    .message-wrapper {
+      margin-top: 35px;
+      margin-bottom: 5px;
+    }
+    .bill .message-wrapper {
+      margin-top: 0;
+    }
+  }
+
+
+
 }
 
 
@@ -161,6 +197,11 @@ main {
   margin: 30px 0;
   padding: 30px 20px 20px;
   border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 
   .amount-section {
     display: grid;
@@ -186,7 +227,7 @@ main {
       margin: 0px;
 
       color: $strong-cyan;
-      font-size: 30px;
+      font-size: 35px;
       text-align: right;
     }
 
@@ -207,10 +248,26 @@ main {
 
     padding: 10px 0px;
     margin-top: 10px;
+
+    // position: absolute;
+    // bottom: 0;
+
+    &:hover {
+      background-color: $light-grayish-cyan;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 40px;
+    margin: 10px;
+
+    .amount-section p.result {
+      font-size: 40px;
+    }
   }
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: $very-dark-cyan; }
+.attribution { font-size: 11px; text-align: center; color: $very-dark-cyan;}
+.attribution a { color: $strong-cyan; }
   
