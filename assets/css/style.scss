@@ -31,24 +31,31 @@ body {
 main {
   background-color: $white;
   margin: 0;
-  padding: 20px 30px;
+  padding: 20px 25px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
 .input-section {
   color: $dark-grayish-cyan;
+  padding: 10px;
 
   p {
     margin-top: 25px;
     margin-bottom: 7px;
   }
 
-  .tip-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  .tip-buttons-section {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 50px);
+    gap: 15px;
+    
 
   }
 
@@ -61,9 +68,10 @@ main {
     border: none;
 
     border-radius: 5px;
-    width: 48%;
-    margin: 7px 0px;
-    padding: 7px 30px;
+    //max-height: 60px;
+    //width: 48%;
+    //margin: 7px 0px;
+    //padding: 7px 30px;
 
     &:hover {
       background-color: $strong-cyan;
@@ -105,6 +113,7 @@ main {
       width: 90%;
 
       outline: none;
+      caret-color: $strong-cyan;
 
       &::placeholder {
         color: $dark-grayish-cyan2;
@@ -116,10 +125,14 @@ main {
     }
   }
 
-  .custom-tip{
-    width: 39%;
+  .custom-tip {
+    padding: 5px 15px;
     input {
       width: 100%;
+
+      &::placeholder {
+        color: $dark-grayish-cyan;
+      }
     }
   }
 }
@@ -128,7 +141,7 @@ main {
 .results-section {
 
   background-color: $very-dark-cyan;
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 30px 20px 20px;
   border-radius: 20px;
 
@@ -182,5 +195,5 @@ main {
 
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: $very-dark-cyan; }
   
