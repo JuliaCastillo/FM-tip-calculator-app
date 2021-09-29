@@ -2,6 +2,7 @@ const billInput = document.querySelector('#bill-input');
 let bill = 0;
 
 const tipButtons = document.querySelectorAll('.tip-button');
+const customTipInput = document.querySelector('#custom-tip-input');
 let tipPerc = 0.05;
 
 const peopleInput = document.querySelector('#people-input');
@@ -10,6 +11,10 @@ let people = 0;
 const tipResult = document.querySelector('#tip-result');
 const totalResult = document.querySelector('#total-result');
 
+
+
+
+//  EVENT LISTENERS  //
 
 billInput.addEventListener('input', function () {
   bill = parseFloat(billInput.value);
@@ -37,6 +42,16 @@ tipButtons.forEach(item => {
 })
 
 
+
+customTipInput.addEventListener('input', function () {
+  const selectedButton = document.querySelector('.selected');
+  selectedButton.classList.remove('selected');
+
+  tipPerc = parseFloat(customTipInput.value / 100);
+  calculateTip();
+})
+
+
 peopleInput.addEventListener('input', function () {
   people = parseFloat(peopleInput.value);
   if (people !== 0 && !isNaN(people)) {
@@ -49,6 +64,9 @@ peopleInput.addEventListener('input', function () {
 })
 
 
+
+//  FUNCTION TO CALCULATE TIP  //
+
 function calculateTip() {
   if (people !== 0 && bill !== 0) {
     let tip = bill * tipPerc;
@@ -59,6 +77,11 @@ function calculateTip() {
     totalResult.textContent = totalPerPerson.toFixed(2);
   }
 }
+
+
+
+
+// ERROR MESSAGES //
 
 
 function showErrorMessage(inputField) {
@@ -84,6 +107,8 @@ function removeErrorMessage(inputField) {
 
 
 
+
+// RESET BUTTON
 
 const resetButton = document.querySelector('#reset-button');
 
