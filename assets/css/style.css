@@ -101,13 +101,31 @@ main {
   font-size: 24px;
   text-align: right;
   background-color: #e6f2f4;
+  color: #00494d;
   border-radius: 5px;
   height: 100%;
   width: 90%;
+  outline: none;
 }
 
-.input-section .input-wrapper input:active {
-  border: none;
+.input-section .input-wrapper input::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+.input-section .input-wrapper input:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.input-section .input-wrapper input::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.input-section .input-wrapper input::placeholder {
+  color: #7f9c9f;
+}
+
+.input-section .input-wrapper:focus-within {
+  border: 2px solid #26c0ab;
 }
 
 .input-section .custom-tip {
