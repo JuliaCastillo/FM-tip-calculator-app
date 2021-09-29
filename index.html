@@ -22,7 +22,10 @@
   <main>
     <section class="input-section">
       <div class="bill">
-        <p>Bill</p>
+        <div class="message-wrapper">
+          <p class="name">Bill</p>
+          <p class="error-message" id="bill-error-message">Can't be zero</p>
+        </div>
         <div class="input-wrapper">
           <img src="images/icon-dollar.svg" alt="">
           <input type="number" placeholder="0" id="bill-input">
@@ -44,7 +47,11 @@
       </div>
 
       <div class="people">
-        <p>Number of People</p>
+
+        <div class="message-wrapper">
+          <p class="name">Number of People</p>
+          <p class="error-message" id="people-error-message">Can't be zero</p>
+        </div>
         <div class="input-wrapper">
           <img src="images/icon-person.svg" alt="">
           <input type="number" placeholder="0" id="people-input">

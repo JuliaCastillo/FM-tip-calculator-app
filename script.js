@@ -13,7 +13,12 @@ const totalResult = document.querySelector('#total-result');
 
 billInput.addEventListener('input', function () {
   bill = parseFloat(billInput.value);
-  calculateTip();
+  if (bill !== 0 && !isNaN(bill)) {
+    removeErrorMessage('bill')
+    calculateTip();
+  } else {
+    showErrorMessage('bill');
+  }
 })
 
 
@@ -34,12 +39,18 @@ tipButtons.forEach(item => {
 
 peopleInput.addEventListener('input', function () {
   people = parseFloat(peopleInput.value);
-  calculateTip();
+  if (people !== 0 && !isNaN(people)) {
+    removeErrorMessage('people')
+    calculateTip();
+  } else {
+    showErrorMessage('people');
+  }
+
 })
 
 
 function calculateTip() {
-  if (people !== 0 && tipPerc !== 0) {
+  if (people !== 0 && bill !== 0) {
     let tip = bill * tipPerc;
     let tipPerPerson = tip / people;
     let totalPerPerson = (bill + tip) / people;
@@ -48,6 +59,30 @@ function calculateTip() {
     totalResult.textContent = totalPerPerson.toFixed(2);
   }
 }
+
+
+function showErrorMessage(inputField) {
+  const input = document.querySelector(`#${inputField}-input`);
+  const errorMessage = document.querySelector(`#${inputField}-error-message`);
+
+  errorMessage.style.display = 'block';
+  if (!input.parentElement.classList.contains('input-error')) {
+    input.parentElement.classList.add('input-error');
+  }
+}
+
+function removeErrorMessage(inputField) {
+  const input = document.querySelector(`#${inputField}-input`);
+  const errorMessage = document.querySelector(`#${inputField}-error-message`);
+
+  errorMessage.style.display = 'none';
+  if (input.parentElement.classList.contains('input-error')) {
+    input.parentElement.classList.remove('input-error');
+  }
+
+}
+
+
 
 
 const resetButton = document.querySelector('#reset-button');

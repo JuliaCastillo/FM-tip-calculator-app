@@ -7,6 +7,7 @@ $dark-grayish-cyan2: hsl(184, 14%, 56%);
 $light-grayish-cyan: hsl(185, 41%, 84%);
 $light-grayish-cyan2: hsl(189, 41%, 93%);
 $white: hsl(0, 0%, 100%);
+$orange: hsl(8, 63%, 67%);
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
@@ -40,9 +41,21 @@ main {
   color: $dark-grayish-cyan;
   padding: 10px;
 
-  p {
+  .message-wrapper {
     margin-top: 25px;
     margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    .error-message {
+      display: none;
+      text-align: right;
+      color: $orange;
+    }
   }
 
   .tip-buttons-section {
@@ -134,6 +147,10 @@ main {
         color: $dark-grayish-cyan;
       }
     }
+  }
+
+  .input-error {
+    border: 2px solid $orange !important;
   }
 }
 

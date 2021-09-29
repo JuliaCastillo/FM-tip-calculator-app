@@ -35,9 +35,25 @@ main {
   padding: 10px;
 }
 
-.input-section p {
+.input-section .message-wrapper {
   margin-top: 25px;
   margin-bottom: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.input-section .message-wrapper p {
+  margin: 0;
+}
+
+.input-section .message-wrapper .error-message {
+  display: none;
+  text-align: right;
+  color: #e08476;
 }
 
 .input-section .tip-buttons-section {
@@ -145,6 +161,10 @@ main {
 
 .input-section .custom-tip input::placeholder {
   color: #5e7a7d;
+}
+
+.input-section .input-error {
+  border: 2px solid #e08476 !important;
 }
 
 .results-section {
