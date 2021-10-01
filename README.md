@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/tip-calculator-using-css-grid-and-js-fETEm7Esd)
 - Live Site URL: [Live site URL here](https://juliacastillo.github.io/FM-tip-calculator-app/)
 
 ## My process
