@@ -2,6 +2,12 @@
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+Started on 27/09/2021.
+
+Finished on 29/09/2021.
+
+Approx time spent on it: 6.5 hours.
+
 ## Table of contents
 
 - [Overview](#overview)
